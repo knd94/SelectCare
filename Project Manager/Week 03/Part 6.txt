@@ -1,0 +1,1 @@
+how do we structure it? Any ideas? The code will have to go through Git Hub and I can create folders if necessary. 
