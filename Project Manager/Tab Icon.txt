@@ -1,0 +1,1 @@
+<link rel="icon" type="image/png" href="Pictures/SelectCare Logo.png"> <!-- This part of the code is the Tab's logo -->
