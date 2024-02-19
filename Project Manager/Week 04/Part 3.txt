@@ -1,0 +1,2 @@
+Next slide please. .
+In Thursday’s meeting, Luke had been researching a lot and enjoying it too. Matt had been looking into extensions within Python. Musab had been doing the homepage, as well as the registration and login pages. And Kian was mapping out the databases. We felt like we can do the MVP if we do two tasks every week, and we discussed the university’s Wi-Fi being broken. Has everyone completed their respective tasks? 

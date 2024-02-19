@@ -1,0 +1,2 @@
+Next slide please. .
+In the last week’s discussion, we talked about the physical folders going into a digital format, the possibility of Q R codes to login, the issues with My S Q L, I showed you all how to use Git Hub on teams, tasks, the logo designed by me Tuesday, and the MVP; which was the chat system, a calendar, the notifications system, and the registration and login pages. Is everyone fine with that?
