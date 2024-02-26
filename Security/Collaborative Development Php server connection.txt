@@ -1,0 +1,49 @@
+<?php
+// Database connection parameters added parameters give greater protection against SQL injection attacks
+$servername = "localhost";
+$username = "Kianusername";
+$password = "KianPassword";
+$dbname = "databasename";
+
+// Create a database connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Check if the connection was successful
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+// Define the SQL query
+$sql = "SELECT Tablenameunknown, Tablenameunknown, Tablenameunknown, Tablenameunknown FROM Tablename";
+
+// Execute the SQL query
+$result = $conn->query($sql);
+
+// Check if any records were found
+if ($result->num_rows > 0) {
+    echo "<table>";
+    echo "<tr>";
+    echo "<th>Tablenameunknown</th>";
+    echo "<th>Tablenameunknown</th>";
+    echo "<th>Tablenameunknown</th>";
+    echo "<th>Tablenameunknown</th>";
+    echo "</tr>";
+
+    // Loop through the records and display them in an HTML table optional and needs styling css or java
+    while ($row = $result->fetch_assoc()) {
+        echo "<tr>";
+        echo "<td>" . $row['Tablenameunknown'] . "</td>";
+        echo "<td>" . $row['Tablenameunknown'] . "</td>";
+        echo "<td>" . $row['Tablenameunknown'] . "</td>";
+        echo "<td>" . $row['Tablenameunknown'] . "</td>";
+        echo "</tr>";
+    }
+
+    echo "</table>";
+} else {
+    echo "No records found.";
+}
+
+// Close the database connection
+$conn->close();
+?>
