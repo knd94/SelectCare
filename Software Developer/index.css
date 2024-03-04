@@ -1,0 +1,254 @@
+:root {
+    color: ;
+}
+html{
+    scroll-behavior: smooth;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+
+.menu__bar {
+    background-color: #4A90E2;
+    height: 80px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+body{
+    background-color: beige;
+    color: #fff;
+}
+/*-darkslategray--*/
+.logo {
+    color: white;
+    font-size: 30px;
+}
+.logo span {
+    color: rgb(68, 68, 118);
+}
+
+.menu__bar ul {
+    list-style: none;
+    display: flex;
+}
+.menu__bar ul li {
+    padding: 10px 30px;
+    position: relative;
+}
+
+.menu__bar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+
+    transition: all 0.3s;
+}
+
+.menu__bar ul li a:hover {
+    color: rgb(68, 68, 118);
+    transform: translateY(-5px);
+}
+
+.dropdown__menu {
+    display: none;
+}
+
+.menu__bar ul li:hover .dropdown__menu {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background-color: #4A90E2;
+}
+
+.menu__bar ul li:hover .dropdown__menu ul {
+    display: block;
+    margin: 10px;
+}
+
+.dropdown__menu ul li {
+    width: 150px;
+    padding: 10px;
+}
+
+#home {
+    width: 100%;
+    height: 100vh;
+    background-image: url(images/image2.png);
+    background-size: cover;
+    background-position: center;
+}
+.container{
+    padding: 10px 10%;
+}
+
+.container img{
+    display: block;
+    width: 150px;
+}
+
+
+
+/*---About-------*/
+
+#about{
+    padding: 80px 0;
+    color: #4A90E2;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.about-col-1{
+    flex-basis: 35%;
+}
+.about-col-1 img{
+    width: 100%;
+    border-radius: 15px;
+}
+.about-col-2{
+    flex-basis: 60%;
+}
+.about-col-2 p{
+    font-size: 27px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+
+/*---services-------*/
+#services .heading {
+    color: #4A90E2;
+    padding-top: 50px;
+}
+
+.services{
+    width: 80%;
+    margin: auto;
+    padding: 2% 0;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.box1{
+    flex-basis: 30%;
+    color: #fff;
+    padding: 2%;
+    margin-bottom: 2%;
+    background-color: #4A90E2;
+    border-radius: 10px;
+    box-shadow: rgba(0,0,0,0.35) 0px 5px 15px;
+}
+.heading{
+    padding: 2% 0;
+    color: #2e6476;
+    font-size: 40px;
+}
+.box1 i{
+    padding:  5%;
+    background-color: #f8fdff6b;
+    border-radius: 50%;
+    font-size: 20px;
+}
+.box1 h2{
+    padding: 2% 0;
+    font-size: 28px;
+}
+
+
+
+
+
+
+/* contact */
+#contact{
+    padding: 100px 90;
+}
+
+.container{
+    background-color: #4A90E2;
+}
+
+.contact-left{
+    flex-basis: 35%;
+    
+}
+.contact-right{
+    flex-basis: 60%;
+}
+.contact-left p{
+    margin-top: 30px;
+} 
+
+.contact-left p i{
+    color: #ffffff;
+    margin-right: 15px;
+    font-size: 25px;
+}
+
+.social-icons{
+    margin-top: 30px;
+}
+.social-icons a{
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: white;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+.social-icons a:hover{
+    color: #ffffff;
+    transform: translateY(-5px);
+}
+.btn.btn2{
+    display: inline-block;
+    background: beige;
+}
+.contact-right form{
+    width: 100%;
+}
+
+form input, form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: beige;
+    padding: 15px;
+    margin: 15px 0;
+    color: black;
+    font-size: 18px;
+    border-radius: 6px;
+    cu
+}
+form .btn1{
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.copyright{
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background: beige;
+    font-weight: 300;
+    margin-top: 20px;
+}
+.copyright p{
+    color: black;
+}
