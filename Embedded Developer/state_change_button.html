@@ -5,12 +5,35 @@
 
 <p> State Change Test </p>
 
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<audio id = "beep" src = "beep.mp3" preload="auto"></audio>
+	
+	 <script>
+		function check_state(){
+			$(document).ready(function() {
+				$.getJSON('check_state.php', function(response) {
+					if (response.state === "on"){
+						document.getElementById('beep').play();
+						alert("Jean Smith has pressed the assistance button. Please contact her immediately.");
+					}
+				});
+			});
+		}
+		setInterval(check_state, 8000)
+    </script>
+
 </head>
 
 <body>
- 	<form action = 'http://192.168.1.219/html_button.php' method = "POST">
-		<button type = "submit" id = "submit_button"> Click to submit! </button>
+	
+ 	<form action = 'html_button.php' method = "POST">
+		<button type = "submit" id = "submit_button"> Confirm Assistance / Turn off Alert </button>
 	</form>
+	
+ 	<form action = 'send_sms.php' method = "POST">
+		<button type = "sms" id = "sms"> Send SMS </button>
+	</form>
+	
 </body>
 
 </html>

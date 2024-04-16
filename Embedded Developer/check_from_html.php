@@ -2,6 +2,9 @@
 
 header('Content-Type: application/json');
 
+session_start();
+
+
 $server = "localhost";
 $user = "1808558";
 $password = "220xiv";

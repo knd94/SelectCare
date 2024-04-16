@@ -29,9 +29,9 @@ echo "Colour = ", $colour, "\n";
 echo "State = ", $state, "\n";
 
 $server = "localhost";
-$user = "matthew";
-$password = "password";
-$database = "light_state";
+$user = "1808558";
+$password = "220xiv";
+$database = "db1808558";
 
 $conn = new mysqli($server, $user, $password, $database);
 

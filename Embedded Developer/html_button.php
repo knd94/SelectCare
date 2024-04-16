@@ -1,18 +1,14 @@
 <?php
 
-// This script 
-
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
-	//$colour = htmlspecialchars($_REQUEST['colour']);
-	//$state = htmlspecialchars($_REQUEST['state']);
 	$colour = 'green';
 	$state = 'off';
 }
 
 $server = "localhost";
-$user = "matthew";
-$password = "password";
-$database = "light_state";
+$user = "1808558";
+$password = "220xiv";
+$database = "db1808558";
 
 $conn = new mysqli($server, $user, $password, $database);
 
