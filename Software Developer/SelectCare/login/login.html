@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="login.css">
+    <title>Sign In</title>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1 class="logo">Select<span>Care</span></h1>
+        <form id="signInForm">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" placeholder="Enter your username" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Enter your password" required>
+            <div class="g-recaptcha" data-sitekey="6Le-GsopAAAAAMd5n02ifLatYbsL12PmaXTMozIb"></div>
+                <input type="submit" value="Login">
+        </form>
+        <h4>Don't have an account? Register <a href="/register/register.html">here</a></h4>
+    </div>
+
+    <script>
+        document.getElementById('signInForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            const storedUser = JSON.parse(localStorage.getItem('user'));
+
+            if (storedUser && username === storedUser.username && password === storedUser.password) {
+                alert('Login successful!');
+                window.location.href = '/elder-dashboard/elderdashboard.html';
+            } else {
+                alert('Invalid username or password. Please try again.');
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+
+.calendar-container {
+    text-align: center;
+}
+
+.calendar {
+    display: block;
+    margin: auto;
+}
