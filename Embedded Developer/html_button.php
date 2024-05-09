@@ -1,14 +1,17 @@
 <?php
 
+header("Location: https://mi-linux.wlv.ac.uk/~2229668/select_care/website_files/elderdashboard.html");
+
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
 	$colour = 'green';
 	$state = 'off';
 }
 
 $server = "localhost";
-$user = "1808558";
-$password = "220xiv";
-$database = "db1808558";
+$user = "2229668";
+$password = "Bioion01";
+$database = "db2229668";
+
 
 $conn = new mysqli($server, $user, $password, $database);
 
