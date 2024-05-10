@@ -10,21 +10,28 @@
     <link 
     <link rel="stylesheet" href="elderdashboard.css">
 	
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<audio id = "beep" src = "beep.mp3" preload="auto"></audio>
 	
 	 <script>
-	function check_state(){
+		function check_state(){
+		
 			$(document).ready(function() {
 				$.getJSON('check_state.php', function(response) {
 					if (response.state === "on"){
+						document.getElementById('box_change').className = 'box2';
 						document.getElementById('beep').play();
 						alert("Jean Smith has pressed the assistance button. Please contact her immediately.");
+						console.log(response.state);
 					}
+					else if (response.state === 'off'){
+					document.getElementById('box_change').className = 'box1';
+					console.log(response.state);
+			}
 				});
 			});
 		}
-		setInterval(check_state, 8000)
+		setInterval(check_state, 4000)
     </script>
 </head>
     
@@ -38,14 +45,13 @@
 
         <ul>
             
-            <li><a href="/elder-dashboard/elderdashboard.html">Home</a></li>
-            <li><a href="calendar/calendar.html">Calendar</a></li>
-            <li><a href="chatbot/chatbot.html">Chatbot</a></li>
-            <li><a href="scheduleCall/scheduleCall.html">Call</a></li>
-            <li><a href="alert.html">Emergancy alert</a></li>
-            <li><a href="notifications/notifications.html">Notifications</a></li>
-            <li><a href="Support/support.html">Support</a></li>
-            <li><a href="/index.html">Log out</a></li>
+            <li><a href="#header">Home</a></li>
+            <li><a href="calendar.html">Calendar</a></li>
+            <li><a href="chatbot.html">Chatbot</a></li>
+            <li><a href="schedule-call.html">Call</a></li>
+            <li><a href="notifications.html">Notifications</a></li>
+            <li><a href="support.html">Support</a></li>
+            <li><a href="index.html">Log out</a></li>
             
                 
             
@@ -65,30 +71,31 @@
             <div class="row">
 
                 <div class="box1">
-                    <button onclick="location.href='calendar/calendar.html'">
+                    <button onclick="location.href='calendar/index.html'">
                         <i class="fa-solid fa-calendar"></i>
                         <h2>Calendar</h2>
-                        <p>Our calendar service keeps elders organized with essential appointments and events.</p>
+                        <p>Our calendar service keeps seniors organized with essential appointment and medication reminders.</p>
                     </button>
                 </div>
                 <div class="box1">
-                    <button onclick="location.href='chatbot/chatbot.html'">
+                    <button onclick="location.href='chatbot.html'">
                         <i class="fa-brands fa-rocketchat"></i>
                         <h2>Chatbot</h2>
-                        <p>Providing instant assistance, our chatbot can answer queires a elderly might have.</p>
+                        <p>Providing instant companionship and assistance, our chatbot is a comforting presence for seniors.</p>
                     </button>
                 </div>
                 <div class="box1">
-                    <button onclick="location.href='scheduleCall/scheduleCall.html'">
+                    <button onclick="location.href='schedule-call.html'">
                         <i class="fa-solid fa-phone"></i>
                         <h2>Schedule call</h2>
-                        <p>Easily coordinate calls with loved ones or carers through our convenient scheduling service.</p>
+                        <p>Easily coordinate calls with loved ones or caregivers through our convenient scheduling service.</p>
                     </button>
                 </div>
             </div>
 
             <div class="row">
-                <div class="box1">
+
+                <div id = "box_change" class="box1">
 					<form action = 'html_button.php' method = "POST">
 						<button type = "submit" id = "submit_button"> 
                         <i class="fa-solid fa-bell"></i>
@@ -97,18 +104,19 @@
                     </button>
 					</form>
                 </div>
+				
                 <div class="box1">
-                    <button onclick="location.href='notifications/notifications.html'">
+                    <button onclick="location.href='notifications.html'">
                         <i class="fa-solid fa-message"></i>
                         <h2>Notifications</h2>
                         <p>Stay informed with important updates and reminders through our notification service, promoting communication and coordination.</p>
                     </button>
                 </div>
                 <div class="box1">
-                    <button onclick="location.href='Support/support.html'">
+                    <button onclick="location.href='support.html'">
                         <i class="fa-sharp fa-light fa-info"></i>
                         <h2>Support</h2>
-                        <p>Our dedicated support team offers legal suppoty, assistance, and emotional care, providing invaluable support to our elderly and their families.</p>
+                        <p>Our dedicated support team offers guidance, assistance, and emotional care, providing invaluable support to seniors and their families.</p>
                     </button>
                 </div>
             </div>
