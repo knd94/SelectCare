@@ -20,12 +20,14 @@
 				$.getJSON('check_state.php', function(response) {
 					if (response.state === "on"){
 						document.getElementById('box_change').className = 'box2';
+						document.getElementById("assistance").innerHTML = "Confirm Assistance / Turn off Alert";
 						document.getElementById('beep').play();
 						alert("Jean Smith has pressed the assistance button. Please contact her immediately.");
 						console.log(response.state);
 					}
 					else if (response.state === 'off'){
 					document.getElementById('box_change').className = 'box1';
+					document.getElementById("assistance").innerHTML = "The alert button is currently not active.";
 					console.log(response.state);
 			}
 				});
@@ -100,7 +102,7 @@
 						<button type = "submit" id = "submit_button"> 
                         <i class="fa-solid fa-bell"></i>
                         <h2>Emergency alert</h2>
-                        <p>Confirm Assistance / Turn off Alert</p>
+                        <p id = "assistance" >The alert button is currently not active.</p>
                     </button>
 					</form>
                 </div>
