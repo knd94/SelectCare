@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="login.css">
+        <title>SelectCare</title>
+		<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    </head>
+    <body>
+        <div class="container">
+            <h1 class="logo">Select<span>Care</span></h1>
+            <form action="https://mi-linux.wlv.ac.uk/~2229668/select_care/website_files/elderdashboard.html" method="POST">
+                <label for="username">Username:</label>
+                <input type="text" name="username" placeholder="Enter your username" required>
+                <label for="password">Password:</label>
+                <input type="password" name="password" placeholder="Enter your password" required>
+                <div class="check">
+                    <input type="checkbox" name="remember">
+                    <label for="remember">Remember</label>
+                </div>
+				<div class="g-recaptcha" data-sitekey="6Le-GsopAAAAAMd5n02ifLatYbsL12PmaXTMozIb"></div>
+                <input type="submit" value="Login">
+            </form>
+            <script src="script.js"></script>
+        </div>
+    </body>
+</html>
